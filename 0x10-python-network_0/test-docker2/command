@@ -1,0 +1,4 @@
+#!/bin/bash
+apt -y update
+apt-get -y install nginx
+echo hostname

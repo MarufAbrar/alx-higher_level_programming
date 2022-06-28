@@ -1,0 +1,80 @@
+The ``Text identation`` module
+===========================
+
+Using ``text_indentation``
+----------------------
+
+First import ``print_square`` from the ``Print Square`` module:
+
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Now use it:
+
+    >>> text_indentation('abc.def')
+    abc.
+    <BLANKLINE>
+    def
+
+    >>> text_indentation('abc.       def')
+    abc.
+    <BLANKLINE>
+    def
+
+    >>> text_indentation('abc      .        def.')
+    abc      .
+    <BLANKLINE>
+    def.
+    
+    >>> text_indentation('abc..def')
+    abc.
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    def
+
+    >>> text_indentation('abc:def')
+    abc:
+    <BLANKLINE>
+    def
+
+    >>> text_indentation('abc:       def')
+    abc:
+    <BLANKLINE>
+    def
+
+    >>> text_indentation('abc      :        def.')
+    abc      :
+    <BLANKLINE>
+    def.
+
+    >>> text_indentation('abc:def.')
+    abc:
+    <BLANKLINE>
+    def.
+
+    >>> text_indentation('abc.def?')
+    abc.
+    <BLANKLINE>
+    def?
+
+    >>> text_indentation('abc?       def')
+    abc?
+    <BLANKLINE>
+    def
+
+    >>> text_indentation('abc      ?        def.')
+    abc      ?
+    <BLANKLINE>
+    def.
+
+    >>> text_indentation('abc?.def')
+    abc?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    def
+
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string

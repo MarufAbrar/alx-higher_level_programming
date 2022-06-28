@@ -1,0 +1,91 @@
+The ``Add Integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+First ``add_integer`` from the ``Add Integer`` module:
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Now use it:
+
+    >>> add_integer(1, 1)
+    2
+
+    >>> add_integer(1, 2.2)
+    3
+
+    >>> add_integer(2.2, 1)
+    3
+
+    >>> add_integer(2.2, 2.2)
+    4
+
+    >>> add_integer("String", 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, "String")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer("String", "String")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, [1, 2, 3])
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer([1, 2, 3], 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer([1, 2, 3], [1, 2, 3])
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, {1, 2, 3})
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer({1, 2, 3}, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer({1, 2, 3}, {1, 2, 3})
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(2)
+    100
+
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(float('-inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer

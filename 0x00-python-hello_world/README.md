@@ -1,1 +1,1 @@
-# 0x00. Python - Hello, World
+# Python Hello world and C interview prep
