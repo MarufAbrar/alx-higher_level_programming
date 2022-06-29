@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-number = 98.9909099949
-print('{:d} Battery street \n'.format(number))
+Number = 98.1111154
+format_float = "{:.0f}".format(Number)
+print(format_float)
