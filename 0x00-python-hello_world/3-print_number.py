@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 98
-print('{:d} Battery street'.format(number))
+number = 98.990909999
+print('{:d} \n Battery street'.format(number))
