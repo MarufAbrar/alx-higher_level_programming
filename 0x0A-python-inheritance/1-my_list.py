@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 """
-contains the MyList class
+This module implements a custom list object
 """
 
 
 class MyList(list):
-    """a subclass of list"""
-    def __init__(self):
-        """initializes the object"""
-        super().__init__()
-
+    """Custom List
+    """
     def print_sorted(self):
-        """prints the sorted list"""
+        """
+        prints the list, but sorted (ascending sort)
+        """
         print(sorted(self))
