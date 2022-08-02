@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import 101-generator
 """Reads from standard input and computes metrics.
 After every ten lines or the input of a keyboard interruption (CTRL + C),
 prints the following statistics:
